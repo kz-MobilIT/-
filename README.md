@@ -1,7 +1,9 @@
 # Inspection App（点検登録アプリ）
 
 ## 概要
-自動車点検内容を登録・管理するためのDjango製Webアプリです。
+## 概要
+自動車整備・点検業務を想定し、点検内容を登録・管理できる
+Django製のWebアプリです。
 
 ## 主な機能
 - 点検一覧表示
@@ -27,3 +29,9 @@ venv\Scripts\activate
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
+
+## 工夫した点・学習ポイント
+- DjangoのClass Based Viewを使わず、Function Based ViewでCRUDを実装し、処理の流れを理解することを重視しました
+- フォームバリデーションをforms.pyで管理し、viewsをシンプルに保つようにしています
+- base.htmlを作成し、テンプレート継承で共通レイアウトを管理しています
+- Django messages frameworkを使い、ユーザーに分かりやすいエラー表示を実装しました
