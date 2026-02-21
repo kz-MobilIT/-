@@ -12,12 +12,14 @@ Django製のWebアプリです。
 - 点検削除
 - フォームバリデーション（必須・数値チェック）
 - エラーメッセージ表示（Django messages framework）
+- 
 
 ## 使用技術
 - Python
 - Django
 - SQLite3
 - HTML / CSS
+- 
 
 ## セットアップ手順
 ```bash
@@ -29,8 +31,15 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 
+
 ## 工夫した点・学習ポイント
 - DjangoのClass Based Viewを使わず、Function Based ViewでCRUDを実装し、処理の流れを理解することを重視しました
-- フォームバリデーションをforms.pyで管理し、viewsをシンプルに保つようにしています
-- base.htmlを作成し、テンプレート継承で共通レイアウトを管理しています
-- Django messages frameworkを使い、ユーザーに分かりやすいエラー表示を実装しました
+- フォームバリデーションをforms.pyで管理し、viewsをシンプルに保つようにしています。
+- base.htmlを作成し、テンプレート継承で共通レイアウトを管理しています。
+- Django messages frameworkを使い、ユーザーに分かりやすいエラー表示を実装しました。
+
+
+
+## テスト
+- forms.py に実装したバリデーション（必須・数値チェック）に対して単体テストを実装
+- アプリ仕様に合わない Django公式チュートリアル由来のテストは整理
